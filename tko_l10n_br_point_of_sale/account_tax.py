@@ -23,6 +23,7 @@
 ##############################################################################
 from openerp import models, fields
 
+_pos_fiscal_code = [('I', u'Isento'), ('N', u'Não tributado'), ('F', u'Substituição Tributária')]
 
 class account_tax(models.Model):
     _inherit = 'account.tax'
@@ -34,5 +35,5 @@ class account_tax(models.Model):
 class account_tax_code(models.Model):
     _inherit = 'account.tax.code'
 
-    pos_fiscal_code = fields.Selection([('I', u'Isento'), ('N', u'Não tributado'), ('F', u'Substituição Tributária')],
-                                       default='I', string='Fiscal Code')
+    pos_fiscal_code = fields.Selection(_pos_fiscal_code,
+                                       default='I', string=u'Código Fiscal')

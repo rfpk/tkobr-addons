@@ -50,7 +50,7 @@ function l10n_br_fields(instance, module) { //module is instance.point_of_sale
         model: 'product.product',
         fields: ['display_name', 'list_price', 'price', 'pos_categ_id', 'taxes_id', 'ean13', 'default_code',
             'to_weight', 'uom_id', 'uos_id', 'uos_coeff', 'mes_type', 'description_sale', 'description',
-            'product_tmpl_id','fiscal_classification_id'],
+            'product_tmpl_id','fiscal_classification_id','pos_fiscal_code'],
         domain: [['sale_ok', '=', true], ['available_in_pos', '=', true]],
         context: function (self) {
             return {pricelist: self.pricelist.id, display_default_code: false};

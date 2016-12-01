@@ -21,9 +21,11 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+from  openerp import fields, models
+from .account_tax import _pos_fiscal_code
 
-import res_company
-import res_partner
-import point_of_sale
-import account_tax
-import product
+class product_template(models.Model):
+    _inherit = 'product.template'
+
+    pos_fiscal_code = fields.Selection(_pos_fiscal_code,
+                                       default='I', string=u'Código Fiscal')
