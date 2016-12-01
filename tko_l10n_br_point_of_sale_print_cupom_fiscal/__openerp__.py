@@ -41,12 +41,14 @@
         # this module sets discount type fixed, used to compute fixed discount
         'tko_point_of_sale_discount_cards',
         # this module computes discount on total used for print
+        'l10n_br_account_product', #add pos_fiscal_code in product form
     ],
 
     'data': [
         'security/ir.model.access.csv',
         'static/src/xml/main.xml',
         'point_of_sale_view.xml',
+        'product_view.xml',
     ],
     'qweb': [
         'static/src/xml/printer.xml',
