@@ -22,5 +22,4 @@
 #
 ##############################################################################
 
-import mail_mail
-import res_users
+from . import models
